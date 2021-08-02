@@ -1,34 +1,34 @@
 ## Provision a Nessus Scanner ##
 
 variable "scanner_name" {
-  description = "The name of your Nessus scanner as it will appear in the Tenable.io web UI. Defaults to the AWS instance name."
+  description = "nessus_scanner"
   type        = string
   default     = null
 }
 
 variable "tenable_linking_key" {
-  description = "The linking code from tenable.io — Go to Scans > Scanners in the web UI and find the Linking Key there"
+  description = "1d69dbdfea2505487f96fe3dab601fa079f453219e34d3cd1fcbf8bc2f82c4c0"
   type        = string
 }
 
 variable "vpc_id" {
-  description = "The VPC with which security groups will be associated"
+  description = "vpc-23c3125e"
   type        = string
 }
 
 variable "subnet_id" {
-  description = "Subnet in which the server and related objects will be created"
+  description = "subnet-59b0353f"
   type        = string
 }
 
 variable "instance_type" {
-  description = "The type of instance, e.g. m3.large, c3.2xlarge, etc. to be spun up"
+  description = "t2.micro"
   type        = string
-  default     = "m5.xlarge"
+  default     = "t2.micro"
 }
 
 variable "instance_name" {
-  description = "The name of the instance as it appears in the aws instance list. Overrides any name passed in instance_tags."
+  description = "nessus_scanner"
   type        = string
   default     = null
 }
